@@ -55,10 +55,12 @@ public class LineDestroyer : SpawnableBase
         var rand = Random.Range(0, 2);
         _multiplier = rand == 0 ? _xMultiplier : _yMultiplier;
         type = rand == 0 ? transform.localScale.x : transform.localScale.y;
-        _initialSprite = childImage.sprite = image[rand];
+        childImage.sprite = image[rand];
+        _initialSprite = childImage.sprite;
     }
     private void InteractWithBall(Ball ball)
     {
+        SoundManager.PlaySound("specialHit");
         ExtendLength();
     }
     private void ExtendLength()

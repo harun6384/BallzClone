@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Block : SpawnableBase
 {
+    [SerializeField] private GameObject particleEffect;
     private SpriteRenderer _spriteRenderer;
     private TMP_Text _text;
     private BlockSpawner _spawner;
@@ -107,6 +108,8 @@ public class Block : SpawnableBase
         }
         else if (destroyable)
         {
+            SoundManager.PlaySound("blockDestroy");
+            Instantiate(particleEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z - 1), Quaternion.identity);
             Destroy(gameObject);
             _spawner.SpawnedObject.Remove(gameObject);
         }

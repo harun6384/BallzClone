@@ -18,6 +18,7 @@ public class BallReturn : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Ball ball))
         {
+            SoundManager.PlaySound("ballReturn");
             InteractWithBall(ball);
         }
     }

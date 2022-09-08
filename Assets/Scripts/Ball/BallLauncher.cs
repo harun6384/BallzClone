@@ -77,7 +77,6 @@ public class BallLauncher : MonoBehaviour
             ball.gameObject.SetActive(true);
             instBalls.Add(ball);
             ball.GetComponent<Rigidbody2D>().AddForce(-direction);
-
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -91,6 +90,7 @@ public class BallLauncher : MonoBehaviour
         _endDragPosition = worldPosition;
 
         Vector3 direction = _endDragPosition - _startDragPosition;
+        _launchPreview.SetStartPoint(transform.position);
         _launchPreview.SetEndPoint(transform.position - direction);
     }
     private void EndDrag()

@@ -32,4 +32,15 @@ public class Ball : MonoBehaviour
         randomSpeed = new Vector2(Random.Range(-1f, 2f), 1f);
     }
     public void ChangeBallDirectionMethod(Ball ball) => ChangeBallDirection(this);
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out Block block))
+        {
+            SoundManager.PlaySound("blockDestroy");
+        }
+        if (collision.gameObject.TryGetComponent(out Walls walls))
+        {
+            SoundManager.PlaySound("blockDestroy");
+        }
+    }
 }

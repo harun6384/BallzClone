@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameStateManager : MonoBehaviour
 {
     [SerializeField] private BallLauncher ballLauncher;
-    private GameState _currentState;
+    [SerializeField] private GameState _currentState;
     public GameState CurrentState => _currentState;
     public static GameStateManager Instance { get; private set; }
     private void Awake()
