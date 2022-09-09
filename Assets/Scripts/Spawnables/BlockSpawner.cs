@@ -11,7 +11,7 @@ public class BlockSpawner : MonoBehaviour
     [SerializeField] private List<GameObject> spawnables;
     [SerializeField] private Transform spawnableParent;
     private int playWidth = 7;
-    private float _distanceBetweenBlocks = 0.7f;
+    private float _distanceBetweenBlocks = 0.75f;
     private int _rowsSpawned;
     public List<GameObject> SpawnedObject 
     {

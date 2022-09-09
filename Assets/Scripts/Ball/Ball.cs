@@ -43,4 +43,11 @@ public class Ball : MonoBehaviour
             SoundManager.PlaySound("blockDestroy");
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out DirectionChanger directionChanger))
+        {
+            SoundManager.PlaySound("blockDestroy");
+        }
+    }
 }

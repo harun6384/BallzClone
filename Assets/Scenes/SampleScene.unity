@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionChanger: {fileID: 2327514535489899685, guid: 6c1aecc02ed9a7344b2a97a29f5d822d, type: 3}
+  directionChangerParent: {fileID: 752094382}
   instantiatedDirectionChanger: []
   colObjects: []
 --- !u!50 &157458945
@@ -4637,6 +4638,7 @@ GameObject:
   - component: {fileID: 1572291802}
   - component: {fileID: 1572291803}
   - component: {fileID: 1572291804}
+  - component: {fileID: 1572291805}
   m_Layer: 0
   m_Name: TopWall
   m_TagString: Untagged
@@ -4749,6 +4751,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbebe589f6ac92b42b9a6826adf1ffad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1572291805
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572291800}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1596204187
 GameObject:
   m_ObjectHideFlags: 0
@@ -6376,7 +6399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2012753042969172409, guid: c91d743a3cc822d499064c6914283333, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 2012753042969172409, guid: c91d743a3cc822d499064c6914283333, type: 3}
       propertyPath: m_LocalPosition.y

@@ -121,7 +121,6 @@ public class BallLauncher : MonoBehaviour
             StartCoroutine(ChangeBallLauncherPosition(1f));
             ballReturn.IsPositionCached = false;
             LevelEnd();
-            _isBallsLaunched = false;
         }
     }
     private void CloseLaunchPreview()
@@ -184,5 +183,6 @@ public class BallLauncher : MonoBehaviour
             yield return null;
         }
         _currentPos = targetPos;
+        _isBallsLaunched = false;
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class DirectionChangerManager : MonoBehaviour
 {
     [SerializeField] private GameObject directionChanger;
+    [SerializeField] private GameObject directionChangerParent;
     private Vector3 newPos;
     private HashSet<GameObject> collidedGameObjects = new HashSet<GameObject>();
     private HashSet<GameObject> instDirectionChanger = new HashSet<GameObject>();
@@ -43,7 +44,7 @@ public class DirectionChangerManager : MonoBehaviour
     }
     private void InstantiateDirectionChanger(Ball ball)
     {
-        var insDir = Instantiate(directionChanger, GetPosition(ball), Quaternion.identity);
+        var insDir = Instantiate(directionChanger, GetPosition(ball), Quaternion.identity, directionChangerParent.transform);
         if (instDirectionChanger.Add(insDir))
         {
             instantiatedDirectionChanger.Add(insDir);
